@@ -1,0 +1,264 @@
+/* Color theme from website theme picker */
+:root {
+    --ink-black: #11151cff;
+    --deep-space-blue: #212d40ff;
+    --charcoal-blue: #364156ff;
+    --smoky-rose: #7d4e57ff;
+    --rosy-copper: #d66853ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--ink-black);
+    color: white;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-style: italic;
+}
+
+h3 {
+    background-color: var(--ink-black);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+p {
+    text-align: justify;
+    line-height: 30px;
+    text-indent: 0;
+}
+
+p:nth-of-type(1) {
+    text-indent: 30px;
+}
+
+ol {
+    list-style-type: lower-alpha;
+    margin-left: 30px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+#main-content {
+    padding-top: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--deep-space-blue);
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-headshot {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin: 0 15px 15px 0;
+    border: 3px solid var(--rosy-copper);
+}
+
+.sidebar h2 {
+    color: var(--rosy-copper);
+    text-align: center;
+    background: none;
+}
+
+.sidebar i {
+    display: block;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    text-indent: 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.contact-info a {
+    color: var(--rosy-copper);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: var(--charcoal-blue);
+}
+
+.content h1 {
+    color: var(--rosy-copper);
+}
+
+.nav-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: var(--charcoal-blue);
+    color: var(--rosy-copper);
+}
+
+.sidebar-nav {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-nav button {
+    padding: 10px 15px;
+    background-color: var(--charcoal-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sidebar-nav button:hover {
+    background-color: var(--smoky-rose);
+}
+
+.anchor-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.anchor-list li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--charcoal-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-indent: 0;
+}
+
+.anchor-list li a:hover {
+    background-color: var(--smoky-rose);
+}
+
+.experience-item {
+    background-color: var(--deep-space-blue);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid var(--rosy-copper);
+}
+
+.experience-header {
+    margin-bottom: 15px;
+}
+
+.experience-title {
+    color: var(--rosy-copper);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    display: block;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.experience-date {
+    display: block;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.experience-description {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.experience-description p {
+    line-height: 30px;
+}
+
+.experience-description a {
+    color: var(--rosy-copper);
+    text-decoration: none;
+}
+
+.experience-description a:hover {
+    text-decoration: underline;
+}
+
+/* Images all different sizes and border colors */
+.experience-description img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.experience-description img:nth-of-type(1) {
+    height: 200px;
+    border: 3px solid var(--rosy-copper);
+}
+
+.experience-description img:nth-of-type(2) {
+    height: 250px;
+    border: 3px solid var(--smoky-rose);
+}
+
+.experience-description img:nth-of-type(3) {
+    height: 180px;
+    border: 3px solid #5588aa;
+}
