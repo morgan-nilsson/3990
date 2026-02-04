@@ -1,306 +1,220 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+article:first-of-type {
+  background-color: rgb(66, 37, 2);
+  color: rgb(245, 201, 147);
+  padding: 10px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    background-color: white;
-    padding: 10px;
+article:first-of-type .task1,
+article:first-of-type .task2 {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
+  padding: 10px;
+  margin: 10px 0;
 }
 
-.header_block {
-    background-color: plum;
-    width: 100%;
-    height: 120px;
-    position: relative;
-    padding: 20px;
-    margin-bottom: 10px;
+article:last-of-type {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
+  padding: 10px;
 }
 
-.header_image {
-    width: 100px;
-    height: 80px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    border-radius: 50%;
+article:last-of-type .task1,
+article:last-of-type .task2,
+article:last-of-type .task3 {
+  background-color: rgb(66, 37, 2);
+  color: rgb(245, 201, 147);
+  padding: 10px;
+  margin: 10px 0;
 }
 
-.header_title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    font-size: 24px;
-    font-weight: bold;
+article:first-of-type h2 {
+  font-style: italic;
 }
 
-.menu_block {
-    background-color: mediumpurple;
-    width: 100%;
-    height: 60px;
-    position: relative;
-    padding: 15px 20px;
-    margin-bottom: 10px;
+article:first-of-type .task1 > div {
+  display: none;
+  background-color: rgb(66, 37, 2);
+  color: rgb(245, 201, 147);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  width: fit-content;
 }
 
-.menu_link {
-    background-color: rebeccapurple;
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    margin-right: 10px;
-    float: left;
-    border-radius: 8px;
+article:first-of-type .task1 > div::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: rgb(66, 37, 2) transparent transparent transparent;
 }
 
-.menu_link:hover {
-    background-color: pink;
+article:first-of-type .task1:hover > div {
+  display: block;
 }
 
-.content_container {
-    position: relative;
-    /* edit the +0px to see the footer scroll */
-    height: calc(100vh - 320px + 0px);
-    margin-bottom: 20px;
+article:first-of-type .task2 ul li:first-child {
+  background-color: rgb(156, 98, 27);
+  width: fit-content;
 }
 
-.aside1_block {
-    background-color: plum;
-    width: 19%;
-    height: 30%;
-    position: sticky;
-    top: 0;
-    float: left;
-    z-index: 10;
+article:first-of-type .task2 ul li:not(.special) {
+  font-style: italic;
 }
 
-.aside1_block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+article:first-of-type .task2 ul li:nth-child(4) {
+  text-decoration: underline;
 }
 
-.img2_block {
-    position: fixed;
-    bottom: 12%;
-    right: 20px;
-    width: 150px;
-    height: 100px;
-    z-index: 100;
-    border-radius: 15px;
-    overflow: hidden;
+article:first-of-type .task2 ul li:nth-child(odd) {
+  font-weight: bold;
 }
 
-.img2_block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+article:first-of-type:hover .task1,
+article:first-of-type:hover .task2 {
+  opacity: 0.5;
 }
 
-.aside2_block {
-    background-color: plum;
-    width: 19%;
-    height: 68%;
-    position: absolute;
-    left: 0;
-    top: 32%;
-    padding: 20px;
+article:first-of-type .task1:hover,
+article:first-of-type .task2:hover {
+  opacity: 1;
+  border: 2px solid red;
 }
 
-.course-list {
-    background-color: lightpink;
-    list-style: none;
-    padding: 15px;
-    height: 100%;
-    border-radius: 5px;
+article:last-of-type:hover .task1,
+article:last-of-type:hover .task2,
+article:last-of-type:hover .task3 {
+  opacity: 0.5;
 }
 
-.course-item {
-    background-color: palevioletred;
-    margin-bottom: 8px;
-    border-radius: 3px;
-    position: relative;
-    height: 50px;
+article:last-of-type .task1:hover,
+article:last-of-type .task2:hover,
+article:last-of-type .task3:hover {
+  opacity: 1;
+  border: 2px dotted pink;
 }
 
-.course-item::before {
-    background-color: palevioletred;
-    color: white;
-    font-weight: bold;
-    padding: 12px 15px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 45px;
-    text-align: center;
-    line-height: 26px;
+article:last-of-type .task1 blockquote {
+  position: relative;
+  margin: 20px 30px;
+  padding: 15px 25px;
 }
 
-.course-item:nth-child(1)::before { content: "1."; }
-.course-item:nth-child(2)::before { content: "2."; }
-.course-item:nth-child(3)::before { content: "3."; }
-.course-item:nth-child(4)::before { content: "4."; }
-.course-item:nth-child(5)::before { content: "5."; }
-
-.course-text {
-    color: white;
-    font-weight: bold;
-    padding: 12px 15px;
-    position: absolute;
-    left: 45px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    line-height: 26px;
+article:last-of-type .task1 blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.course-item:nth-child(1) .course-text { background: linear-gradient(to right, red 85%, palevioletred 85%); }
-.course-item:nth-child(2) .course-text { background: linear-gradient(to right, red 60%, palevioletred 60%); }
-.course-item:nth-child(3) .course-text { background: linear-gradient(to right, red 95%, palevioletred 95%); }
-.course-item:nth-child(4) .course-text { background: linear-gradient(to right, red 45%, palevioletred 45%); }
-.course-item:nth-child(5) .course-text { background: linear-gradient(to right, red 70%, palevioletred 70%); }
-
-.main_content_block {
-    background-color: mediumpurple;
-    width: 58%;
-    height: 100%;
-    position: absolute;
-    left: 21%;
-    top: 0;
-    padding: 20px;
+article:last-of-type .task1 blockquote::after {
+  content: "\201D";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.section1, .section2 {
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 35%;
-    border-radius: 20px;
-    padding: 2%;
+article:last-of-type .task1 blockquote:hover::before,
+article:last-of-type .task1 blockquote:hover::after {
+  background-color: rgb(184, 59, 21);
+  color: white;
 }
 
-.section1 {
-    margin-bottom: 20px;
+article:last-of-type .task1:has(blockquote:hover) h4 {
+  color: rgb(184, 59, 21);
 }
 
-.aside3_block {
-    background-color: plum;
-    width: 19%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 20px;
+/* Even list smiley face */
+article:last-of-type .task2 ul li:nth-child(even)::marker {
+  content: "\263A";
+  font-size: 1.2em;
 }
 
-.aside3_block h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
+article:last-of-type .task3 span:first-child {
+  padding: 2px 6px;
 }
 
-.todo-item {
-    padding: 8px 12px;
-    margin-bottom: 2px;
-    position: relative;
-    border-radius: 3px;
+article:last-of-type .task3 span:first-child:hover {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
 }
 
-.todo-item.even { background-color: cornflowerblue; }
-.todo-item.odd { background-color: royalblue; }
-.todo-item.completed { background-color: lightgray; }
-
-.todo-icon {
-    float: left;
-    margin-right: 10px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
+article:last-of-type .task3 span:first-child::before {
+  content: "=> ";
 }
 
-.todo-text {
-    font-size: 14px;
-    color: darkgray;
-    margin-left: 24px;
-    margin-right: 30px;
+article:last-of-type .task3 span:first-child::after {
+  content: " / ";
 }
 
-.todo-item.completed .todo-text {
-    text-decoration: line-through;
-    color: gray;
+/* "Wrong" span */
+article:last-of-type .task3 span:nth-child(2) {
+  padding: 2px 6px;
 }
 
-.remove-btn {
-    color: red;
-    font-size: 12px;
-    cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 2px;
-    position: absolute;
-    right: 8px;
-    top: 8px;
+article:last-of-type .task3 span:nth-child(2):hover {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
 }
 
-.remove-btn:hover {
-    background-color: rgba(255, 0, 0, 0.1);
+article:last-of-type .task3 .wrong,
+article:last-of-type .task3 .correct {
+  position: relative;
+  padding: 15px;
+  margin: 10px 0;
 }
 
-.footer_block {
-    background-color: midnightblue;
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 20;
-    color: white;
-    padding: 20px;
+/* Red cross */
+article:last-of-type .task3 .wrong::after {
+  content: "\2716";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: red;
 }
 
-.footer_menu, .footer_social {
-    float: left;
+/* Green check */
+article:last-of-type .task3 .correct::after {
+  content: "\2714";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: green;
 }
 
-.footer_social {
-    float: right;
+article:last-of-type .task3 span:first-child:hover ~ .correct {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
 }
 
-.footer_column {
-    float: left;
-    margin-right: 40px;
+article:last-of-type .task3 span:nth-child(2):hover ~ .wrong {
+  background-color: rgb(245, 201, 147);
+  color: rgb(66, 37, 2);
 }
-
-.footer_menu_link {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 10px;
-    float: left;
-    width: 100%;
-}
-
-.footer_menu_link:hover {
-    text-decoration: underline;
-}
-
-.social_icon {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    border-radius: 10px;
-    filter: grayscale(100%);
-    float: left;
-    margin-left: 15px;
-}
-
-.social_icon:hover {
-    filter: grayscale(0%);
-}
-
-.social_icon.facebook { background-image: url('images/facebook.png'); }
-.social_icon.instagram { background-image: url('images/instagram.png'); }
-.social_icon.youtube { background-image: url('images/youtube.png'); }
