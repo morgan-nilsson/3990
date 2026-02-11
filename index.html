@@ -1,113 +1,142 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
-  <link rel="stylesheet" href="styles.css">
+﻿<!DOCTYPE html>
+<html lang="en">
 
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-  
-    
-    <article>
-      <h2>Part 1.  CSS pseudo-classes</h2>
-      <div class="task1">
-        <div>Task1: Hi there! I am a speech bubble</div>
-        Hove over me to see a speech bubble
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Canada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-      <div class="task2">
-        <ul> Task2: Select and style elems in the list 
-          <li>elem1</li>
-          <li>elem2</li>
-          <li class="special">elem3</li>
-          <li>elem4</li>
-          <li>elem5</li>
-        </ul>
-        
-      </div>
+<body>
 
+    <header>
+        <h1>About Canada</h1>
+    </header>
 
-    </article>
+    <div class="page">
+        <aside class="sidebar-left">
+            <div class="fact">Canada is actually HUGE</div>
+            <div class="fact">71% of the world's maple syrup comes from Canada</div>
+            <div class="fact">The Canada-US border is the longest international border between two countries in the
+                world US</div>
+            <div class="fact">The country spans six different time zones</div>
+            <div class="fact">The country has more lakes than the rest of the world combined</div>
+        </aside>
 
-    <article>
-      <h3>Part 2.  CSS pseudo-elements</h3>
-      <div class="task1">
-        <h4>Custom blockquote</h4>
-        <blockquote>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.
-        </blockquote> 
-      </div>
+        <main>
+            <input type="radio" name="tab" id="tab-home" class="tab-radio">
+            <input type="radio" name="tab" id="tab-provinces" class="tab-radio">
+            <input type="radio" name="tab" id="tab-holidays" class="tab-radio">
+            <input type="radio" name="tab" id="tab-parks" class="tab-radio">
 
-      <div class="task2">
-        <h4>Bullet List with Icons and markers</h4>
-         <ul> 
-          <li>elem1</li>
-          <li>elem2</li>
-          <li class="special">elem3</li>
-          <li>elem4</li>
-          <li>elem5</li>
-        </ul>
-      </div>
+            <nav class="tab-nav">
+                <label for="tab-home" class="tab-btn">Home</label>
+                <label for="tab-provinces" class="tab-btn">Provinces and territories</label>
+                <div class="tab-dropdown">
+                    <span class="tab-btn">My Alberta</span>
+                    <div class="submenu">
+                        <label for="tab-holidays">Public holidays</label>
+                        <label for="tab-parks">Provincial parks</label>
+                    </div>
+                </div>
+            </nav>
 
-      <div class="task3">
-        <span>Right</span><span>Wrong</span> answers
+            <div class="tab-default">
+                <img src="public/canada.svg" alt="Map of Canada">
+            </div>
 
-          <div class="wrong">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.</div>
+            <section class="tab-panel panel-home">
+                <h2>Get to know Canada</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
+                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
+                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
+                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
+                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
+                    tincidunt turpis. Donec eu ma.</p>
+            </section>
 
-          <div class="correct">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Pariatur animi, similique beatae quae quis quibusdam doloribus sunt 
-            ab temporibus repellendus facere odio atque sequi quas enim, 
-            officia repudiandae quasi nobis.</div>
-      </div>
+            <section class="tab-panel panel-provinces">
+                <h2>Learn more about Canada's provinces and territories</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
+                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
+                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
+                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
+                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
+                    tincidunt turpis. Donec eu ma.</p>
+                <div class="province-item">
+                    <img src="public/ab.jpg" alt="Alberta Flag" class="province-flag">
+                    <span class="province-name">Alberta</span>
+                    <span class="province-area">661,848 sq km</span>
+                </div>
+                <div class="province-item">
+                    <img src="public/bc.jpg" alt="British Columbia Flag" class="province-flag">
+                    <span class="province-name">British Columbia</span>
+                    <span class="province-area">944,735 sq km</span>
+                </div>
+            </section>
 
+            <section class="tab-panel panel-holidays">
+                <h2>Alberta public holidays</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
+                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
+                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
+                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
+                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
+                    tincidunt turpis. Donec eu ma.</p>
+            </section>
 
+            <section class="tab-panel panel-parks">
+                <h2>National and Provincial Parks in Alberta</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
+                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
+                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
+                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
+                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
+                    tincidunt turpis. Donec eu ma.</p>
+            </section>
+        </main>
 
-    </article>
-  
-    
-    
-    
-    
-  
+        <aside class="sidebar-right">
+            <div class="sidebar-right-purple">
+                <h2>IT jobs &amp; work opportunities</h2>
+                <div class="jobs">
+                    <div class="job-card">
+                        <div class="card-top">
+                            <div class="badge popular">MOST POPULAR</div>
+                            <div class="job-title">Cybersecurity Analyst</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius
+                            tincidunt malesuada pellentesque augue.</p>
+                        <p class="salary">$52.03 <em>an hour</em></p>
+                    </div>
+                    <div class="job-card">
+                        <div class="card-top">
+                            <div class="badge new">NEW</div>
+                            <div class="job-title">IT Technician</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="salary">$38.5 <em>an hour</em></p>
+                    </div>
+                    <div class="job-card">
+                        <div class="card-top">
+                            <div class="badge new">NEW</div>
+                            <div class="job-title">Senior Business IT<br>analyst</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <p class="salary">$120.0 <em>an hour</em></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
 
-<script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-							elm.setAttribute('style', 'display: block; height: 0.5rem;');
-						});
+    <footer>
+        <span>&copy; 2026 | NWP &trade;</span>
+        <span>All rights reserved</span>
+    </footer>
 
-						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
-							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
-							elm.replaceWith(mrow);
-						});
+</body>
 
-						window.D2L.MathJax.loadMathJax({
-							outputScale: 1.5,
-							renderLatex: false,
-							enableMML3Support: false
-						});
-					}
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.1.206/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+</html>
