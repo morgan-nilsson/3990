@@ -1,142 +1,102 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Canada</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS NWP Programs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>About Canada</h1>
-    </header>
-
-    <div class="page">
-        <aside class="sidebar-left">
-            <div class="fact">Canada is actually HUGE</div>
-            <div class="fact">71% of the world's maple syrup comes from Canada</div>
-            <div class="fact">The Canada-US border is the longest international border between two countries in the
-                world US</div>
-            <div class="fact">The country spans six different time zones</div>
-            <div class="fact">The country has more lakes than the rest of the world combined</div>
-        </aside>
-
-        <main>
-            <input type="radio" name="tab" id="tab-home" class="tab-radio">
-            <input type="radio" name="tab" id="tab-provinces" class="tab-radio">
-            <input type="radio" name="tab" id="tab-holidays" class="tab-radio">
-            <input type="radio" name="tab" id="tab-parks" class="tab-radio">
-
-            <nav class="tab-nav">
-                <label for="tab-home" class="tab-btn">Home</label>
-                <label for="tab-provinces" class="tab-btn">Provinces and territories</label>
-                <div class="tab-dropdown">
-                    <span class="tab-btn" tabindex="0">My Alberta</span>
-                    <div class="submenu">
-                        <label for="tab-holidays">Public holidays</label>
-                        <label for="tab-parks">Provincial parks</label>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="tab-default">
-                <img src="public/canada.svg" alt="Map of Canada">
-            </div>
-
-            <section class="tab-panel panel-home">
-                <h2>Get to know Canada</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
-                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
-                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
-                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
-                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
-                    tincidunt turpis. Donec eu ma.</p>
-            </section>
-
-            <section class="tab-panel panel-provinces">
-                <h2>Learn more about Canada's provinces and territories</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
-                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
-                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
-                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
-                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
-                    tincidunt turpis. Donec eu ma.</p>
-                <div class="province-item">
-                    <img src="public/ab.jpg" alt="Alberta Flag" class="province-flag">
-                    <span class="province-name">Alberta</span>
-                    <span class="province-area">661,848 sq km</span>
-                </div>
-                <div class="province-item">
-                    <img src="public/bc.jpg" alt="British Columbia Flag" class="province-flag">
-                    <span class="province-name">British Columbia</span>
-                    <span class="province-area">944,735 sq km</span>
-                </div>
-            </section>
-
-            <section class="tab-panel panel-holidays">
-                <h2>Alberta public holidays</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
-                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
-                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
-                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
-                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
-                    tincidunt turpis. Donec eu ma.</p>
-            </section>
-
-            <section class="tab-panel panel-parks">
-                <h2>National and Provincial Parks in Alberta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius tincidunt
-                    malesuada auger sed massa rutrum imperdet. Pellentesque hendrerit, lectus ac malesuada rutrum, nibh
-                    metus ma pharetra justo. Vestibulum bibendum, metus eu semper tempus, ex elit sollicitudin nisi,
-                    eget maximus ma nus ac auctor dictum. Vestibulum arenibus tempor lacus quis pellentesque. Interdum
-                    et malesuada fa Phasellus et lacus massa. Ut a odio libero. Ut id est laoreet, euismod nulla in,
-                    tincidunt turpis. Donec eu ma.</p>
-            </section>
-        </main>
-
-        <aside class="sidebar-right">
-            <div class="sidebar-right-purple">
-                <h2>IT jobs &amp; work opportunities</h2>
-                <div class="jobs">
-                    <div class="job-card">
-                        <div class="card-top">
-                            <div class="badge popular">MOST POPULAR</div>
-                            <div class="job-title">Cybersecurity Analyst</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a metus eget magna varius
-                            tincidunt malesuada pellentesque augue.</p>
-                        <p class="salary">$52.03 <em>an hour</em></p>
-                    </div>
-                    <div class="job-card">
-                        <div class="card-top">
-                            <div class="badge new">NEW</div>
-                            <div class="job-title">IT Technician</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="salary">$38.5 <em>an hour</em></p>
-                    </div>
-                    <div class="job-card">
-                        <div class="card-top">
-                            <div class="badge new">NEW</div>
-                            <div class="job-title">Senior Business IT<br>analyst</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.</p>
-                        <p class="salary">$120.0 <em>an hour</em></p>
-                    </div>
-                </div>
-            </div>
-        </aside>
+  <header class="dream">
+    <div class="dream-grid">
+      <div class="dream-headline">
+        <h1>Computer Science is your dream?</h1>
+      </div>
+      <div class="dream-info">
+        <p>Our leading-edge programs offer practical connections at every step, balanaaaaaaaaa aafsdvjaaa wwwwwwasda asd adads adddsasd asd as.</p>
+        <a href="#first-card" class="btn-browse">Browse NWP programs</a>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <span>&copy; 2026 | NWP &trade;</span>
-        <span>All rights reserved</span>
-    </footer>
+  <section class="programs-section">
+    <div class="programs-grid">
+
+      <article class="program-card" id="first-card">
+        <div class="card-img-wrapper">
+          <img src="public/programpic1.jpg" alt="Computer Systems Technology Certificate">
+          <div class="card-img-caption">Computer Systems Technology (Certificate)</div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="https://www.nwpolytech.ca/program/computer-systems-technology-certificate" class="btn-visit">Visit NWP website</a>
+      </article>
+
+      <article class="program-card">
+        <div class="card-img-wrapper">
+          <img src="public/programpic2.jpg" alt="Computer Systems Technology Diploma">
+          <div class="card-img-caption">Computer Systems Technology (Diploma)</div>
+        </div>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <a href="https://www.nwpolytech.ca/program/computer-systems-diploma" class="btn-visit">Visit NWP website</a>
+      </article>
+
+      <article class="program-card">
+        <div class="card-img-wrapper">
+          <img src="public/programpic3.jpg" alt="Bachelor of Computing Science Degree">
+          <div class="card-img-caption">Bachelor of Computing Science (Degree)</div>
+        </div>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+        <a href="https://nwpolytech.ca/programs/deg-bach-comp-sci.html" class="btn-visit">Visit NWP website</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="public/introcs.png" alt="Introduction to Computing Science">
+        </div>
+        <p class="gallery-title">Introduction to Computing Science</p>
+        <p class="gallery-info">Credits: 3<br>Total Hours: 90</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="public/dsa.png" alt="Elementary Data Structures">
+        </div>
+        <p class="gallery-title">Elementary Data Structures</p>
+        <p class="gallery-info">Credits: 3<br>Total Hours: 90</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="public/bastat.png" alt="Introduction to Applied Statistics I">
+        </div>
+        <p class="gallery-title">Introduction to Applied Statistics I</p>
+        <p class="gallery-info">Credits: 3<br>Total Hours: 90</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <img src="public/progmethod.png" alt="Practical Programming Methodology">
+        </div>
+        <p class="gallery-title">Practical Programming Methodology</p>
+        <p class="gallery-info">Credits: 3<br>Total Hours: 90</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <span>© 2025.</span>
+      <span>Made for NWP with ❤️ and CSS Grid.</span>
+    </div>
+  </footer>
 
 </body>
-
 </html>
