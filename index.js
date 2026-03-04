@@ -44,7 +44,6 @@ const userState = {
 
             case 'tester':
             case 'designer':
-            case 'student':
                 // display hi button
                 sayHiButton = document.createElement('button');
                 sayHiButton.textContent = "Say Hi";
@@ -102,7 +101,7 @@ function syaHi() {
             greeting = "Hola";
             break;
         default:
-            alert("Sorry but I don't speak that language.");
+            greeting = "Sorry but I don't speak that language.";
     }
     alert(greeting);
 }
@@ -157,7 +156,7 @@ function favoriteAnimals() {
                 alert("Sorry but I don't have an image for that animal.");
         }
     } else {
-        part1Div.textContent = `“Much like mathematics,
+        myDiv.textContent = `“Much like mathematics,
     programming is a logico-deductive system. And I think the important point
     that I am making is that in a purely logico-deductive system there is no
     philosophy - everything is known. However, insofar as there is art in
@@ -167,14 +166,7 @@ function favoriteAnimals() {
 }
 
 
-const loginButtonPart2 = document.getElementById('loginButton');
-if (!loginButtonPart2) {
-    console.error("Could not find login button in part 2");
-}
-
-loginButtonPart2.addEventListener('click', part2Login);
-
-function part2Login() {
+const part2Login = function() {
     const userNamePromptValue = prompt("What is your username?").toLowerCase();
     let password = "";
     if (userNamePromptValue === 'admin') {
@@ -190,7 +182,7 @@ function part2Login() {
         } else if (userNamePromptValue === 'tester') {
             return "222"
         } else if (userNamePromptValue === 'designer') {
-            return "333"
+            return "111"
         } else {
             return null;
         }
@@ -213,20 +205,6 @@ function part2Login() {
         alert(`You are now logged in as ${userState.status}.`);
     }
 
-    /**
-     * @param {number} length
-     * @returns {string}
-     */
-    function generatePassword(length) {
-        const characters = "0123456789";
-        let password = "";
-        for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            password += characters[randomIndex];
-        }
-        return password;
-    }
-
     if (userState.status === 'admin') {
 
         const agePromptValue = prompt("How old are you?");
@@ -238,7 +216,7 @@ function part2Login() {
         const yearOfBirthPromptValue = prompt("What year were you born?");
         const age = CURRENT_YEAR - parseInt(yearOfBirthPromptValue);
 
-        const product = userState.status === 'tester' ? "Adobe XD" : "QAPro"
+        const product = userState.status === 'designer' ? "Adobe XD" : "QAPro"
 
         if (14 <= age && age <= 18 && 5 <= numberOfAvailablePortfoliosPromptValue && numberOfAvailablePortfoliosPromptValue <= 10) {
             alert(`You get a 10% discount on ${product}!`);
@@ -247,4 +225,26 @@ function part2Login() {
         }
 
     }
+}
+
+const loginButtonPart2 = document.getElementById('loginButton');
+if (!loginButtonPart2) {
+    console.error("Could not find login button in part 2");
+}
+
+loginButtonPart2.addEventListener('click', part2Login);
+
+
+/**
+ * @param {number} length
+ * @returns {string}
+ */
+const generatePassword = function(length) {
+    const characters = "0123456789";
+    let password = "";
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        password += characters[randomIndex];
+    }
+    return password;
 }
