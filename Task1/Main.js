@@ -1,11 +1,8 @@
-import { arrTexts, arrColors } from './myArrays.js';
-import { generateButtons, displayButtons } from './myFunctions.js';
-import { ColorButton } from './myColorButton.js';
+import { NumberGenerator } from './myNumberGenerator.js';
+import { generateNews } from './myNews.js';
 
-let arrButtons = generateButtons(arrTexts, arrColors);
-displayButtons(arrButtons);
+const numGen = new NumberGenerator('gen');
 
-let colorBtn = new ColorButton('Extra Button', 'purple', 'Extra Button is shown on the purple background', 'white');
-setTimeout(() => {
-    colorBtn.show();
-}, arrButtons.length * 2000);
+numGen.onChange = (value) => {
+    generateNews('news', value);
+};

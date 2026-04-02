@@ -3,43 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS NWP Programs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
         }
-        .news-block {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 10px 0;
+        .palette {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 15px;
         }
-        .news-block img {
-            max-width: 300px;
-            display: block;
-            margin: 10px 0;
-        }
-        .news-block button {
-            padding: 8px 16px;
-            margin: 5px;
+        .color-cell {
+            width: 40px;
+            height: 40px;
             cursor: pointer;
-            font-size: 14px;
-            border: none;
+            border: 1px solid #ccc;
         }
-        .likes-display {
-            color: gold;
+        #text-block {
+            background-color: lightcoral;
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div id="app">
-        <p>Last news</p>
-        <div id="content">
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <input id="myBtn" type="button" value="click me" />
+    <div id="palette-container" class="palette"></div>
+    <div id="text-block">
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
     </div>
-    <script src="src/index1.js"></script>
+
+    <script src="myColorButton.js" type="module"></script>
+    <script src="Main.js" type="module"></script>
 </body>
 </html>

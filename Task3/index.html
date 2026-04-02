@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .menu-title {
+            cursor: pointer;
+            font-size: 24px;
+            user-select: none;
+        }
+        .menu-title .arrow {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        ul.sweeties {
+            display: none;
+            list-style: none;
+            padding-left: 30px;
+            font-size: 20px;
+        }
+        ul.sweeties.open {
+            display: block;
+        }
+        ul.sweeties li {
+            cursor: pointer;
+            padding: 3px 0;
+        }
+        ul.sweeties li.selected {
+            color: red;
+        }
+        #sweet-image {
+            margin-top: 15px;
+        }
+        #sweet-image img {
+            max-width: 300px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-container">
+        <div class="menu-title" id="menu-toggle">
+            <span class="arrow">&#9658;</span> Sweeties (click me)!
+        </div>
+        <ul class="sweeties" id="sweeties-list">
+            <li data-sweet="cake">Cake</li>
+            <li data-sweet="donut">Donut</li>
+            <li data-sweet="honey">Honey</li>
+        </ul>
+    </div>
+    <div id="sweet-image"></div>
+
+    <script src="Main.js"></script>
+</body>
+</html>
