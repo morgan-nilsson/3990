@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>CS NWP Programs</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        .groupElement {
+            background-color: brown;
+        }
+        .shopItem {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: rgb(100,65,23);
+        }
+        .shopItemHover {
+            box-shadow: 10px 10px 5px 0px rgba(232,38,38,0.75);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="itemGroups">
+            <h3>Available Categories of items:</h3>
+            <ul id="groups"></ul>
+        </div>
+        <article id="itemGallery"></article>
+        <article id="itemDescription"></article>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
